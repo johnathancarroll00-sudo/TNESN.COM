@@ -1,0 +1,7 @@
+{
+  "dailyTeamPost": {
+    "enabled": true,
+    "schedule": "0 12 * * *",
+    "timezone": "America/Toronto"
+  }
+}

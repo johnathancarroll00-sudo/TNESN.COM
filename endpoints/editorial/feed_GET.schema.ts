@@ -1,0 +1,4 @@
+import superjson from 'superjson';
+export type EditorialCard={id:string;title:string;summary:string;sourceUrl:string;sourceName:string|null;sourcePublishedAt:Date|null;verifiedAt:Date|null;verificationProvider:string|null;isRumor:boolean;itemType:string};
+export type OutputType={items:EditorialCard[];team:string;section:string};
+export async function getEditorialFeed(team:string,section:string):Promise<OutputType>{const r=await fetch('/_api/editorial/feed?team='+encodeURIComponent(team)+'&section='+encodeURIComponent(section));if(!r.ok)throw new Error('Could not load verified coverage');return superjson.parse(await r.text())}

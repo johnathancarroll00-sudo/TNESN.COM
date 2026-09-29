@@ -1,0 +1,1 @@
+User-agent: *\nAllow: /\nSitemap: https://true-north-east-sports-network.floot.app/sitemap.xml\n
